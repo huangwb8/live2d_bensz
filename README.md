@@ -14,7 +14,11 @@
 # 使用方法
 
 ```html
+<!--选择1-->
 <script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js"></script>
+
+<!--选择2-->
+<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front_live2d_demo/autoload.js"></script>
 ```
 
 # Test
