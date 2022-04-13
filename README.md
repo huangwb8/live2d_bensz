@@ -14,7 +14,7 @@
 # 使用方法
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/hijiki/front/autoload.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js"></script>
 ```
 
 # 参考
