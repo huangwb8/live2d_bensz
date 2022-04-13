@@ -28,5 +28,6 @@ https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/back/model/Hyperdimensi
 # 参考
 
 + [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang)
-+ [fghrsh / live2d_api](https://github.com/fghrsh/live2d_api)
++ [fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)
++ [fghrsh/live2d_demo](https://github.com/fghrsh/live2d_demo)
 + [summerscar / live2dDemo](https://github.com/summerscar/live2dDemo)
