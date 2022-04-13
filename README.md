@@ -20,6 +20,8 @@
 
 # 测试
 
+> 个人专用，大佬们手下留情，不要点https://purge\*类的网址。谢谢！
+
 + autoload.js
   + https://purge.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js
   + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js
