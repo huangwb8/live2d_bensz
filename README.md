@@ -17,6 +17,10 @@
 <script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js"></script>
 ```
 
+# Test
+
+https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/back/model/HyperdimensionNeptunia/blanc_classic/index.json
+
 # 参考
 
 + [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang)
