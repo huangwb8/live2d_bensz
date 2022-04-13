@@ -14,14 +14,8 @@
 # 使用
 
 ```html
-<!--选择1-->
-<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@master/front/autoload.js"></script>
-
-<!--选择2-->
-<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@master/front_live2d_demo/autoload.js"></script>
-
-<!--选择3-->
-<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@master/front_live2d_demo/assets/autoload.js"></script>
+<!--苯苯的看板娘-->
+<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js"></script>
 ```
 
 # 测试
