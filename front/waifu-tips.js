@@ -1,6 +1,8 @@
 /*
  * Live2D Widget
  * https://github.com/stevenjoezhang/live2d-widget
+ * modified v0.0：by crowya https://github.com/crowya
+ * modified v1.0：by huangwb8 https://github.com/huangwb8
  */
 
 var music_flag=false;
@@ -37,11 +39,11 @@ function loadWidget(config) {
 			<div id="waifu-tool">
 				<span class="fa fa-lg fa-music"></span>
 				<span class="fa fa-lg fa-comment"></span>
-				<span class="fa fa-lg fa-paper-plane"></span>
+				<!--span class="fa fa-lg fa-paper-plane"></span-->
 				<span class="fa fa-lg fa-user-circle"></span>
-				<span class="fa fa-lg fa-street-view"></span>
+				<!--span class="fa fa-lg fa-street-view"></span-->
 				<span class="fa fa-lg fa-camera-retro"></span>
-				<span class="fa fa-lg fa-info-circle"></span>
+				<!--span class="fa fa-lg fa-info-circle"></span-->
 				<span class="fa fa-lg fa-times"></span>
 			</div>
 		</div>`);
