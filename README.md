@@ -26,8 +26,22 @@
 
 # 测试
 
-+ [刷新前端autoload.js](https://purge.jsdelivr.net/gh/huangwb8/live2d_bensz@master/front/autoload.js)；[访问前端autoload.js](https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@master/front/autoload.js)
-+ [刷新API的model_list](https://purge.jsdelivr.net/gh/huangwb8/live2d_bensz@master/back/model_list.json)；[访问API的model_list](https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@master/back/model_list.json)
++ autoload.js
+  + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js
+  + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js
+
++ waifu-tips.js
+  + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/waifu-tips.js
+  + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/waifu-tips.js
+
++ waifu-tips.json
+  + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/waifu-tips.json
+  + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/waifu-tips.json
+
++ model_list.json
+  + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/back/model_list.json
+  + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/back/model_list.json
+
 
 # 参考
 
