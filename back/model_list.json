@@ -1,6 +1,7 @@
 {
     "models": [
 		"hijiki",
+		"tororo",
         "Potion-Maker/Pio",
         "Potion-Maker/Tia",
         "bilibili-live/22",
@@ -34,7 +35,8 @@
         "KantaiCollection/murakumo"
     ],
     "messages": [
-		"苯苯的可爱小猫咪",
+		"苯苯的可爱hijiki",
+		"苯苯的可爱tororo",
         "来自 Potion Maker 的 Pio 酱 ~",
         "来自 Potion Maker 的 Tia 酱 ~",
         "来自 Bilibili Live 的 22 哦 ~",
