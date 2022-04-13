@@ -11,22 +11,23 @@
 
 个人博客：https://blognas.hwb0307.com
 
-# 使用方法
+# 使用
 
 ```html
 <!--选择1-->
-<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@master/front/autoload.js"></script>
 
 <!--选择2-->
-<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front_live2d_demo/autoload.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@master/front_live2d_demo/autoload.js"></script>
 
 <!--选择3-->
-<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front_live2d_demo/assets/autoload.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@master/front_live2d_demo/assets/autoload.js"></script>
 ```
 
-# Test
+# 测试
 
-https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/back/model/HyperdimensionNeptunia/blanc_classic/index.json
++ [刷新前端autoload.js](https://purge.jsdelivr.net/gh/huangwb8/live2d_bensz@master/front/autoload.js)；[访问前端autoload.js](https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@master/front/autoload.js)
++ [刷新API的model_list](https://purge.jsdelivr.net/gh/huangwb8/live2d_bensz@master/back/model_list.json)；[访问API的model_list](https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@master/back/model_list.json)
 
 # 参考
 
