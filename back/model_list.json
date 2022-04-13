@@ -1,14 +1,6 @@
 {
     "models": [
-        "Potion-Maker/Pio",
-        "Potion-Maker/Tia",
-        "bilibili-live/22",
-        "bilibili-live/33",
 		"hijiki",
-        [
-            "ShizukuTalk/shizuku-48",
-            "ShizukuTalk/shizuku-pajama"
-        ],
         [
             "HyperdimensionNeptunia/neptune_classic",
             "HyperdimensionNeptunia/nepnep",
@@ -30,8 +22,7 @@
             "HyperdimensionNeptunia/nepgearswim",
             "HyperdimensionNeptunia/histoire",
             "HyperdimensionNeptunia/histoirenohover"
-        ],
-        "KantaiCollection/murakumo"
+        ]
     ],
     "messages": [
         "来自 Potion Maker 的 Pio 酱 ~",
