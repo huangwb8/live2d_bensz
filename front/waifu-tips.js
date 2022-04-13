@@ -35,6 +35,7 @@ function loadWidget(config) {
 			<div id="waifu-tips"></div>
 			<canvas id="live2d" width="800" height="800"></canvas>
 			<div id="waifu-tool">
+				<span class="fa fa-lg fa-music"></span>
 				<span class="fa fa-lg fa-comment"></span>
 				<span class="fa fa-lg fa-paper-plane"></span>
 				<span class="fa fa-lg fa-user-circle"></span>
@@ -179,18 +180,7 @@ function loadWidget(config) {
 			modelId = 1; // 模型 ID
 			modelTexturesId = 53; // 材质 ID
 		}
-		
-		$("#live2d").mousedown(function(e) {
-			if(e.which==3){
-				showMessage("<div style=\"text-align:center\">秘密通道<br/><a href=\"javascript:aplayer_panel_toggle();\">音乐播放器</a><br/><a href=\"https://blognas.hwb0307.com/wp-admin\" target=\"_blank\">WordPress</a><br/><a href=\"https://crowya.com/\" target=\"_blank\">鸦鸦博客</a></div>",4000,10);
-				}
-			}
-		);
-		$("#live2d").bind("contextmenu", function(e) {
-			return false;
-			}
-		);
-		
+	
 		loadModel(modelId, modelTexturesId);
 		fetch(waifuPath)
 			.then(response => response.json())
@@ -213,6 +203,16 @@ function loadWidget(config) {
 						return;
 					}
 				});
+				$("#live2d").mousedown(function(e) {
+					if(e.which==3){
+						showMessage("<div style=\"text-align:center\">秘密通道<br/><a href=\"javascript:aplayer_panel_toggle();\">音乐播放器</a><br/><a href=\"https://blognas.hwb0307.com/wp-admin\" target=\"_blank\">WordPress</a><br/><a href=\"https://crowya.com/\" target=\"_blank\">鸦鸦博客</a></div>",4000,10);
+						}
+					}
+				);
+				$("#live2d").bind("contextmenu", function(e) {
+					return false;
+					}
+				);
 				result.seasons.forEach(({ date, text }) => {
 					const now = new Date(),
 						after = date.split("-")[0],
@@ -289,7 +289,7 @@ function initWidget(config, apiPath) {
 		};
 	}
 	document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle">
-			<span>看板娘</span>
+			<span>苯苯养了啥宠物啊</span>
 		</div>`);
 	const toggle = document.getElementById("waifu-toggle");
 	toggle.addEventListener("click", () => {
