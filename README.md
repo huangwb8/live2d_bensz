@@ -19,6 +19,9 @@
 
 <!--选择2-->
 <script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front_live2d_demo/autoload.js"></script>
+
+<!--选择3-->
+<script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front_live2d_demo/assets/autoload.js"></script>
 ```
 
 # Test
