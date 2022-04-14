@@ -1,23 +1,7 @@
 /*
  * Live2D Widget
  * https://github.com/stevenjoezhang/live2d-widget
- * v.0.0: modified by crowya https://github.com/crowya
- * v.0.1: modified by huangwb8 https://github.com/huangwb8
  */
-
-var music_flag=false;
-function aplayer_panel_toggle(){
-	if(music_flag){
-		$(".aplayer.aplayer-fixed .aplayer-body").addClass("my-hide");
-		$(".aplayer.aplayer-fixed .aplayer-list").addClass("my-hide zero-margin-bottom");
-		music_flag=false;
-	}
-	else{
-		$(".aplayer.aplayer-fixed .aplayer-body").removeClass("my-hide");
-		$(".aplayer.aplayer-fixed .aplayer-list").removeClass("my-hide zero-margin-bottom");
-		music_flag=true;
-	}
-}
 
 function loadWidget(config) {
 	let { waifuPath, apiPath, cdnPath } = config;
@@ -25,21 +9,24 @@ function loadWidget(config) {
 	if (typeof cdnPath === "string") {
 		useCDN = true;
 		if (!cdnPath.endsWith("/")) cdnPath += "/";
+	} else if (typeof apiPath === "string") {
+		if (!apiPath.endsWith("/")) apiPath += "/";
+	} else {
+		console.error("Invalid initWidget argument!");
+		return;
 	}
-	if (!apiPath.endsWith("/")) apiPath += "/";
 	localStorage.removeItem("waifu-display");
 	sessionStorage.removeItem("waifu-text");
 	document.body.insertAdjacentHTML("beforeend", `<div id="waifu">
 			<div id="waifu-tips"></div>
 			<canvas id="live2d" width="800" height="800"></canvas>
 			<div id="waifu-tool">
-				<span class="fa fa-lg fa-music"></span>
 				<span class="fa fa-lg fa-comment"></span>
-				<!--span class="fa fa-lg fa-paper-plane"></span-->
+				<span class="fa fa-lg fa-paper-plane"></span>
 				<span class="fa fa-lg fa-user-circle"></span>
-				<!--span class="fa fa-lg fa-street-view"></span-->
+				<span class="fa fa-lg fa-street-view"></span>
 				<span class="fa fa-lg fa-camera-retro"></span>
-				<!--span class="fa fa-lg fa-info-circle"></span-->
+				<span class="fa fa-lg fa-info-circle"></span>
 				<span class="fa fa-lg fa-times"></span>
 			</div>
 		</div>`);
@@ -71,33 +58,27 @@ function loadWidget(config) {
 	}, 1000);
 
 	(function registerEventListener() {
-		document.querySelector("#waifu-tool .fa-music").addEventListener("click", () => {
-			document.querySelector('meting-js').aplayer.toggle();
-		});
-		document.querySelector("#waifu-tool .fa-music").addEventListener("click", () => {
-			document.querySelector('meting-js').aplayer.toggle();
-		});
 		document.querySelector("#waifu-tool .fa-comment").addEventListener("click", showHitokoto);
-		/*document.querySelector("#waifu-tool .fa-paper-plane").addEventListener("click", () => {
+		document.querySelector("#waifu-tool .fa-paper-plane").addEventListener("click", () => {
 			if (window.Asteroids) {
 				if (!window.ASTEROIDSPLAYERS) window.ASTEROIDSPLAYERS = [];
 				window.ASTEROIDSPLAYERS.push(new Asteroids());
 			} else {
-				let script = document.createElement("script");
-				script.src = "https://cdn.jsdelivr.net/gh/GalaxyMimi/CDN/asteroids.js";
+				const script = document.createElement("script");
+				script.src = "https://cdn.jsdelivr.net/gh/stevenjoezhang/asteroids/asteroids.js";
 				document.head.appendChild(script);
 			}
-		});*/
+		});
 		document.querySelector("#waifu-tool .fa-user-circle").addEventListener("click", loadOtherModel);
-		//document.querySelector("#waifu-tool .fa-street-view").addEventListener("click", loadRandModel);
+		document.querySelector("#waifu-tool .fa-street-view").addEventListener("click", loadRandModel);
 		document.querySelector("#waifu-tool .fa-camera-retro").addEventListener("click", () => {
 			showMessage("照好了嘛，是不是很可爱呢？", 6000, 9);
 			Live2D.captureName = "photo.png";
 			Live2D.captureFrame = true;
 		});
-		/*document.querySelector("#waifu-tool .fa-info-circle").addEventListener("click", () => {
+		document.querySelector("#waifu-tool .fa-info-circle").addEventListener("click", () => {
 			open("https://github.com/stevenjoezhang/live2d-widget");
-		});*/
+		});
 		document.querySelector("#waifu-tool .fa-times").addEventListener("click", () => {
 			localStorage.setItem("waifu-display", Date.now());
 			showMessage("愿你有一天能与重要的人重逢。", 2000, 11);
@@ -107,10 +88,10 @@ function loadWidget(config) {
 				document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
 			}, 3000);
 		});
-		let devtools = () => {};
+		const devtools = () => {};
 		console.log("%c", devtools);
 		devtools.toString = () => {
-			showMessage("哈哈，你打开了开发者工具，是想要看看我的小秘密吗？", 6000, 9);
+			showMessage("哈哈，你打开了控制台，是想要看看我的小秘密吗？", 6000, 9);
 		};
 		window.addEventListener("copy", () => {
 			showMessage("你都复制了些什么呀，转载要记得加上出处哦！", 6000, 9);
@@ -123,7 +104,7 @@ function loadWidget(config) {
 	(function welcomeMessage() {
 		let text;
 		if (location.pathname === "/") { // 如果是主页
-			let now = new Date().getHours();
+			const now = new Date().getHours();
 			if (now > 5 && now <= 7) text = "早上好！一日之计在于晨，美好的一天就要开始了。";
 			else if (now > 7 && now <= 11) text = "上午好！工作顺利嘛，不要久坐，多起来走动走动哦！";
 			else if (now > 11 && now <= 13) text = "中午了，工作了一个上午，现在是午餐时间！";
@@ -133,7 +114,7 @@ function loadWidget(config) {
 			else if (now > 21 && now <= 23) text = ["已经这么晚了呀，早点休息吧，晚安～", "深夜时要爱护眼睛呀！"];
 			else text = "你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？";
 		} else if (document.referrer !== "") {
-			let referrer = new URL(document.referrer),
+			const referrer = new URL(document.referrer),
 				domain = referrer.hostname.split(".")[1];
 			if (location.hostname === referrer.hostname) text = `欢迎阅读<span>「${document.title.split(" - ")[0]}」</span>`;
 			else if (domain === "baidu") text = `Hello！来自 百度搜索 的朋友<br>你是搜索 <span>${referrer.search.split("&wd=")[1].split("&")[0]}</span> 找到的我吗？`;
@@ -151,7 +132,7 @@ function loadWidget(config) {
 		fetch("https://v1.hitokoto.cn")
 			.then(response => response.json())
 			.then(result => {
-				let text = `这句一言来自 <span>「${result.from}」</span>，是 <span>${result.creator}</span> 在 hitokoto.cn 投稿的。`;
+				const text = `这句一言来自 <span>「${result.from}」</span>，是 <span>${result.creator}</span> 在 hitokoto.cn 投稿的。`;
 				showMessage(result.hitokoto, 6000, 9);
 				setTimeout(() => {
 					showMessage(text, 4000, 9);
@@ -167,7 +148,7 @@ function loadWidget(config) {
 		}
 		text = randomSelection(text);
 		sessionStorage.setItem("waifu-text", priority);
-		let tips = document.getElementById("waifu-tips");
+		const tips = document.getElementById("waifu-tips");
 		tips.innerHTML = text;
 		tips.classList.add("waifu-tips-active");
 		messageTimer = setTimeout(() => {
@@ -189,37 +170,29 @@ function loadWidget(config) {
 			.then(response => response.json())
 			.then(result => {
 				window.addEventListener("mouseover", event => {
-					for (let tips of result.mouseover) {
-						if (!event.target.matches(tips.selector)) continue;
-						let text = randomSelection(tips.text);
+					for (let { selector, text } of result.mouseover) {
+						if (!event.target.matches(selector)) continue;
+						text = randomSelection(text);
 						text = text.replace("{text}", event.target.innerText);
 						showMessage(text, 4000, 8);
 						return;
 					}
 				});
 				window.addEventListener("click", event => {
-					for (let tips of result.click) {
-						if (!event.target.matches(tips.selector)) continue;
-						let text = randomSelection(tips.text);
+					for (let { selector, text } of result.click) {
+						if (!event.target.matches(selector)) continue;
+						text = randomSelection(text);
 						text = text.replace("{text}", event.target.innerText);
 						showMessage(text, 4000, 8);
 						return;
 					}
 				});
-				$("#live2d").mousedown(function(e) {
-				        if(e.which==3){
-				        showMessage("<div style=\"text-align:center\">秘密通道<br/><a href=\"javascript:aplayer_panel_toggle();\">音乐播放器</a><br/><a href=\"https://blognas.hwb0307.com/wp-admin/\" target=\"_blank\">WordPress</a><br/><a href=\"https://crowdrink.com/\" target=\"_blank\">鸦鸦</a></div>",4000,10);
-						}
-				});
-				$("#live2d").bind("contextmenu", function(e) {
-				    return false;
-				});
-				result.seasons.forEach(tips => {
-					let now = new Date(),
-						after = tips.date.split("-")[0],
-						before = tips.date.split("-")[1] || after;
+				result.seasons.forEach(({ date, text }) => {
+					const now = new Date(),
+						after = date.split("-")[0],
+						before = date.split("-")[1] || after;
 					if ((after.split("/")[0] <= now.getMonth() + 1 && now.getMonth() + 1 <= before.split("/")[0]) && (after.split("/")[1] <= now.getDate() && now.getDate() <= before.split("/")[1])) {
-						let text = randomSelection(tips.text);
+						text = randomSelection(text);
 						text = text.replace("{year}", now.getFullYear());
 						//showMessage(text, 7000, true);
 						messageArray.push(text);
@@ -229,9 +202,8 @@ function loadWidget(config) {
 	})();
 
 	async function loadModelList() {
-		let response = await fetch(`${cdnPath}model_list.json`);
-		let result = await response.json();
-		modelList = result;
+		const response = await fetch(`${cdnPath}model_list.json`);
+		modelList = await response.json();
 	}
 
 	async function loadModel(modelId, modelTexturesId, message) {
@@ -240,7 +212,7 @@ function loadWidget(config) {
 		showMessage(message, 4000, 10);
 		if (useCDN) {
 			if (!modelList) await loadModelList();
-			let target = randomSelection(modelList.models[modelId]);
+			const target = randomSelection(modelList.models[modelId]);
 			loadlive2d("live2d", `${cdnPath}model/${target}/index.json`);
 		} else {
 			loadlive2d("live2d", `${apiPath}get/?id=${modelId}-${modelTexturesId}`);
@@ -249,11 +221,11 @@ function loadWidget(config) {
 	}
 
 	async function loadRandModel() {
-		let modelId = localStorage.getItem("modelId"),
+		const modelId = localStorage.getItem("modelId"),
 			modelTexturesId = localStorage.getItem("modelTexturesId");
 		if (useCDN) {
 			if (!modelList) await loadModelList();
-			let target = randomSelection(modelList.models[modelId]);
+			const target = randomSelection(modelList.models[modelId]);
 			loadlive2d("live2d", `${cdnPath}model/${target}/index.json`);
 			showMessage("我的新衣服好看嘛？", 4000, 10);
 		} else {
@@ -271,7 +243,7 @@ function loadWidget(config) {
 		let modelId = localStorage.getItem("modelId");
 		if (useCDN) {
 			if (!modelList) await loadModelList();
-			let index = (++modelId >= modelList.models.length) ? 0 : modelId;
+			const index = (++modelId >= modelList.models.length) ? 0 : modelId;
 			loadModel(index, 0, modelList.messages[index]);
 		} else {
 			fetch(`${apiPath}switch/?id=${modelId}`)
@@ -283,7 +255,7 @@ function loadWidget(config) {
 	}
 }
 
-function initWidget(config, apiPath = "/") {
+function initWidget(config, apiPath) {
 	if (typeof config === "string") {
 		config = {
 			waifuPath: config,
@@ -291,9 +263,9 @@ function initWidget(config, apiPath = "/") {
 		};
 	}
 	document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle">
-			<span>猫 咪</span>
+			<span>看板娘</span>
 		</div>`);
-	let toggle = document.getElementById("waifu-toggle");
+	const toggle = document.getElementById("waifu-toggle");
 	toggle.addEventListener("click", () => {
 		toggle.classList.remove("waifu-toggle-active");
 		if (toggle.getAttribute("first-time")) {
