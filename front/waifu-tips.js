@@ -4,6 +4,7 @@
  * v.0.0: modified by crowya https://github.com/crowya
  * v.0.1: modified by huangwb8 https://github.com/huangwb8
  */
+
 var music_flag=false;
 function aplayer_panel_toggle(){
 	if(music_flag){
