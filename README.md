@@ -7,16 +7,22 @@
 
 只为自己的小博客CDN看板娘所用。
 
-# Demo
-
-个人博客：https://blognas.hwb0307.com
-
 # 使用
+
+我用的是wordpress，只需要在`根目录/wp-content/themes/你的主题/footer.php`的</body>前面加上一句：
 
 ```html
 <!--苯苯的看板娘-->
 <script src="https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js"></script>
 ```
+
+即可快速食用。
+
+具体位置可以见我博客的源代码，地址在这：https://blognas.hwb0307.com
+
+主要是使用了[参考](#参考)的大佬们所提供的前端和后端代码搭建的。
+
+如果在本地博客搭建的话，可以实时预览，但是个人觉得没有必要吧，就托管在github上面就好了。
 
 # 测试
 
