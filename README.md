@@ -35,6 +35,9 @@
   + https://purge.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/waifu.css
   + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/waifu.css
 
++ live2d.min.js
+  + https://purge.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/live2d.min.js
+  + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/live2d.min.js
 + model_list.json
   + https://purge.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/back/model_list.json
   + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/back/model_list.json
