@@ -25,14 +25,15 @@
 + autoload.js
   + https://purge.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js
   + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/autoload.js
-
 + waifu-tips.js
   + https://purge.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/waifu-tips.js
   + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/waifu-tips.js
-
 + waifu-tips.json
   + https://purge.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/waifu-tips.json
   + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/waifu-tips.json
++ waifu.css
+  + https://purge.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/waifu.css
+  + https://cdn.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/front/waifu.css
 
 + model_list.json
   + https://purge.jsdelivr.net/gh/huangwb8/live2d_bensz@latest/back/model_list.json
