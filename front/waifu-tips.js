@@ -1,7 +1,7 @@
 /*
  * Live2D Widget
  * https://github.com/stevenjoezhang/live2d-widget
- * live2d_bensz v0.0.4
+ * live2d_bensz v3.0.4
  */
 
 function loadWidget(config) {
