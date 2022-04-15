@@ -1,9 +1,28 @@
 /*
  * Live2D Widget
  * https://github.com/stevenjoezhang/live2d-widget
- * live2d_bensz v3.0.4
+ * 
+ * Beta versions:
+ * live2d_bensz v3.0.5 增加音乐播放器内置的相关代码。详见：https://crowya.com/1088
+ *
+ * Stable versions: 
+ * live2d_bensz v3.0.4 实测成功
  */
 
+var music_flag=false;
+function aplayer_panel_toggle(){
+	if(music_flag){
+		$(".aplayer.aplayer-fixed .aplayer-body").addClass("my-hide");
+		$(".aplayer.aplayer-fixed .aplayer-list").addClass("my-hide zero-margin-bottom");
+		music_flag=false;
+	}
+	else{
+		$(".aplayer.aplayer-fixed .aplayer-body").removeClass("my-hide");
+		$(".aplayer.aplayer-fixed .aplayer-list").removeClass("my-hide zero-margin-bottom");
+		music_flag=true;
+	}
+}
+ 
 function loadWidget(config) {
 	let { waifuPath, apiPath, cdnPath } = config;
 	let useCDN = false, modelList;
@@ -69,6 +88,9 @@ function loadWidget(config) {
 				script.src = "https://cdn.jsdelivr.net/gh/stevenjoezhang/asteroids/asteroids.js";
 				document.head.appendChild(script);
 			}
+		});
+		document.querySelector("#waifu-tool .fa-music").addEventListener("click", () => {
+			document.querySelector('meting-js').aplayer.toggle();
 		});
 		document.querySelector("#waifu-tool .fa-user-circle").addEventListener("click", loadOtherModel);
 		document.querySelector("#waifu-tool .fa-street-view").addEventListener("click", loadRandModel);
@@ -166,6 +188,14 @@ function loadWidget(config) {
 			modelId = 1; // 模型 ID
 			modelTexturesId = 53; // 材质 ID
 		}
+		$("#live2d").mousedown(function(e) {
+			if(e.which==3){
+				showMessage("<div style=\"text-align:center\">秘密通道<br/><a class=\"fa fa-wordpress\" href=\"https://blognas.hwb0307.com\" title=\"后台\" target=\"_blank\"> WordPress</a><br/><a href=\"https://www.github.com/huangwb8\" title=\"Github\" target=\"_blank\">Github</a></div>",4000,10);
+				}
+		});
+		$("#live2d").bind("contextmenu", function(e) {
+			return false;
+		});
 		loadModel(modelId, modelTexturesId);
 		fetch(waifuPath)
 			.then(response => response.json())
