@@ -2,6 +2,7 @@
     "models": [
 		"prefer/haru01",
 		"prefer/tororo",
+		"prefer/Bronya",
 		"prefer/hijiki",
         "prefer/Potion-Maker/Pio",
         "prefer/Potion-Maker/Tia",
@@ -40,7 +41,8 @@
     "messages": [
 		"苯苯可爱的haru01",
 		"苯苯可爱的tororo",
-		"苯苯可爱的hijiki",
+		"苯苯可爱的Bronya",
+		"hijiki",
         "来自 Potion Maker 的 Pio 酱 ~",
         "来自 Potion Maker 的 Tia 酱 ~",
         "来自 Bilibili Live 的 22 哦 ~",
