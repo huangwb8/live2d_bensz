@@ -1,5 +1,6 @@
 {
     "models": [
+		"prefer/haru01",
 		"prefer/tororo",
 		"prefer/hijiki",
         "prefer/Potion-Maker/Pio",
@@ -34,10 +35,10 @@
         ],
         "prefer/KantaiCollection/murakumo",
 		"prefer/haruto",
-		"prefer/haru01",
 		"prefer/hibiki"
     ],
     "messages": [
+		"苯苯可爱的haru01",
 		"苯苯可爱的tororo",
 		"苯苯可爱的hijiki",
         "来自 Potion Maker 的 Pio 酱 ~",
@@ -48,7 +49,6 @@
         "Nep! Nep! 超次元游戏：海王星 系列",
         "艦隊これくしょん / 叢雲(むらくも)",
 		"haruto",
-		"haru01",
 		"hibiki"
     ]
 }
