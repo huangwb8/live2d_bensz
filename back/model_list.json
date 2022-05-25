@@ -1,6 +1,7 @@
 {
     "models": [
 		"prefer/haru01",
+		"prefer/haru02",
 		"prefer/tororo",
 		"prefer/Bronya",
 		"prefer/hijiki",
@@ -35,11 +36,11 @@
             "prefer/HyperdimensionNeptunia/histoirenohover"
         ],
         "prefer/KantaiCollection/murakumo",
-		"prefer/haruto",
-		"prefer/hibiki"
+		"prefer/haruto"
     ],
     "messages": [
 		"苯苯可爱的haru01",
+		"苯苯可爱的haru02",
 		"苯苯可爱的tororo",
 		"苯苯可爱的Bronya",
 		"hijiki",
@@ -50,7 +51,6 @@
         "Shizuku Talk ！这里是 Shizuku ~",
         "Nep! Nep! 超次元游戏：海王星 系列",
         "艦隊これくしょん / 叢雲(むらくも)",
-		"haruto",
-		"hibiki"
+		"haruto"
     ]
 }
