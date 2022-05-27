@@ -1,4 +1,7 @@
 # live2d_bensz
+
+> 此项目原则上不再维护。因为我已经有了更好的看板娘！详见[这里](https://github.com/huangwb8/live2dyy)。
+
  (～￣▽￣)～ 个人CDN看板娘小挂件(～￣▽￣)～ 
 
 # 说明
